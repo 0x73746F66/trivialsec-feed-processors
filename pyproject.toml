@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=46.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feed-processors"
+version = "1.0.0"
+description = "Early Warning Service feed processor library"
+authors = [
+    {name = "Christopher Langton", email = "chris@trivialsec.com"},
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pydantic == 1.9.2",
+    "retry",
+    "validators",
+    "requests < 2.30.0",
+    "urllib3 < 2"
+]
+
+[tool.pylint]
+max-line-length = 88
+disable = [
+    "C0114", # (missing-module-docstring)
+    "C0115", # (missing-class-docstring)
+    "C0116", # (missing-function-docstring)
+    "R0903", # (too-few-public-methods)
+    "R0913", # (too-many-arguments)
+    "W0105", # (pointless-string-statement)
+]
+
+[tool.pylint.'MESSAGES CONTROL']
+extension-pkg-whitelist = "pydantic"
