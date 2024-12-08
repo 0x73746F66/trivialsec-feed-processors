@@ -14,10 +14,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
-    "pydantic == 1.9.2",
+    "pydantic == 1.10.13",
     "retry",
     "validators",
-    "requests < 2.30.0",
+    "requests < 2.33.0",
     "urllib3 < 2"
 ]
 
